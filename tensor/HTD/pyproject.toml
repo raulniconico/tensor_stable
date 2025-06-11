@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "HTD"
+version = "0.0.1"
+authors = [
+  { name="Zixing QIU", email="zixing.qiu.sci@gmail.com"},
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/raulniconico/tensor"
+Issues = "https://github.com/raulniconico/tensor/issues"
+
+
+[tool.setuptools]
+py-modules = ["HTD"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

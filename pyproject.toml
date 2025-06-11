@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tensor"
+version = "0.0.1"
+authors = [{name="Zixing QIU", email="zixing.qiu.sci@gmail.com"}]
+maintainers = [{name = "Zixing QIU", email="zixing.qiu.sci@gmail.com"}]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = "https://github.com/raulniconico/tensor"
+Issues = "https://github.com/raulniconico/tensor/issues"
+
