@@ -142,10 +142,13 @@ class Concatenate_Kernel(Kernel):
                                                                         grad_0=grad_0,
                                                                         grad_l=grad_kron_left,
                                                                         grad_r=grad_kron_right)
+            if grad_kron_left is not None:
+                node.left.update_cache({"grad_0": grad_kron_left.astype(dtype)})
+            if grad_kron_right is not None:
+                node.right.update_cache({"grad_0": grad_kron_right.astype(dtype)})
 
             node.update_cache({"B_t_grad": grad_B_t.astype(dtype)})
-            node.left.update_cache({"grad_0": grad_kron_left.astype(dtype)})
-            node.right.update_cache({"grad_0": grad_kron_right.astype(dtype)})
+
             node.clean_cache("kron_prod")
 
         if node.is_inner():
