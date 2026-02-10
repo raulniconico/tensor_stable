@@ -10,7 +10,7 @@ def parse_requirements(filename):
 
 setuptools.setup(
     name="tensor",
-    version="0.0.1",
+    version="0.0.2",
     author="Zixing QIU",
     author_email="zixing.qiu.sci@gmail.com",
     packages=setuptools.find_packages(),
