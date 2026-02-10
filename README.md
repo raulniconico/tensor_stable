@@ -21,7 +21,7 @@ at laboratory ISMO. Financed by foundation DATAIA
 ## 1. Installation
 
 ```bash
-git clone -b release_beta_cpu https://<TOKEN>@github.com/raulniconico/tensor_stable.git
+git clone -b master https://<TOKEN>@github.com/raulniconico/tensor_stable.git
 ```
 
 ### 1.1 pip
